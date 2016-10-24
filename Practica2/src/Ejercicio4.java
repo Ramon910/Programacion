@@ -9,28 +9,38 @@ public class Ejercicio4
 {
 	public static void main(String argumentos[])
 	{	// creamos una entrada por teclado y creamos las variables
-		int n=0;
 		
+		int a=0, b=0 ;
 		
-		String b ="";
+		String s ="";
 		
 		Scanner teclado=new Scanner(System.in);
-		
+		Scanner tecladoNumeros=new Scanner(System.in);
 		//con un bucle vamos pidiendo los valores y sumandolos
 		
 		do{
-		   
+			System.out.println("Introduce un número: ");
+			b=tecladoNumeros.nextInt();
 			
+			if(a >= b)
+			{
+				System.out.println("El mayor es " +a);
+			
+			
+			}
+			else System.out.println("El mayor es "+b); a=b;
+		
 			System.out.println("Si quieres seguir pulsa S si no quieres seguir pulsa cualquir tecla");
-			
-			b = teclado.nextLine();
+			s = teclado.nextLine();
 			
 			//compara un string con un string que metemos a mano 
-		}while (b.equals("s"));
+		}while (s.equals("s"));
+		
+		System.out.println("fin");
+		
+		
 
 		
-	// mostramos la suma 
-        System.out.println("El número total es "+n);
 		
 	}
 	

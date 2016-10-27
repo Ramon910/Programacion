@@ -47,12 +47,9 @@ public class Ejercicio10
 					 	
 						
 	                
-		          //System.out.println(""+d);
+		 
 		    
 	}
 }
 
 
-//X1 = (-b + sqrt(b2 - 4ac)) / (2a)
-
-//X2 = (-b - sqrt(b2 - 4ac)) / (2a) 

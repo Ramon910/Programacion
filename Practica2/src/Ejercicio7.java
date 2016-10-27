@@ -15,10 +15,10 @@ public class Ejercicio7
 		
 		Scanner teclado=new Scanner(System.in);
 		Scanner tecladoNumeros=new Scanner(System.in);
-		//con un bucle vamos pidiendo los valores y sumandolos
 		
 		
 		
+	//mediante un bucle pedimos el numero y se redondea hasta que el usuario quiera
 	do{
 		
 	    System.out.println("Introduce el número");

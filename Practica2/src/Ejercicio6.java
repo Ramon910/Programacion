@@ -7,12 +7,12 @@ import java.util.Scanner;//importamos el paquete Scanner de la biblioteca
 public class Ejercicio6 
 {
 	public static void main(String argumentos[])
-	{	// creamos una entrada por teclado y creamos las variables
+	{	//creamos las variables
 		
 		int  i=1 ;
 	
 		
-		
+		//claculamos los multiplos de 3 
 		while (i<=3000)
 		{
 			

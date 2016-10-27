@@ -16,7 +16,7 @@ public class Autoevaluacion
 		
 		Scanner teclado=new Scanner(System.in);
 		Scanner tecladoNumeros=new Scanner(System.in);
-		//con un bucle vamos pidiendo los valores y sumandolos
+		
 		
 	
 			while(!s.equals("t"))
@@ -27,35 +27,52 @@ public class Autoevaluacion
 			valorEntrada =tecladoNumeros.nextInt();
 			
 			if(valorEntrada<=0)
-			  {
-				if(valorEntrada == 0 || valorEntrada<0 && contadorValidos<2)
+			{
+				if(valorEntrada == 0 && contadorValidos<2 || valorEntrada<0 )
 				{
 					System.out.println("Error");
 				}else
 			      {
-				     System.out.println("Si quieres seguir pulsa t si no quieres seguir pulsa cualquir tecla");
+				     System.out.println("Confirma que has terminado pulsando: t");
 					   s = teclado.nextLine();
 			      }
-			  }else
-			 
-		   {
-			if(valorEntrada >= mayor)
-			{
-			   mayor=valorEntrada;
-				
+				continue;
+			  }
+				 
+			   if(contadorValidos==0)
+			   	{
+				  mayor=valorEntrada;
+			   	}
+			   
+			   if(contadorValidos == 1)
+			   {
+				  if(valorEntrada >= mayor)
+				  {
+					  menor=mayor;
+					  mayor = valorEntrada;  
+				  }
+			   }
+			   if(contadorValidos>=2)
+			   {
+				   if(valorEntrada >= mayor)
+					  {
+						  mayor = valorEntrada;  
+					  }
+				   if(valorEntrada<=menor)
+				   {
+					   menor = valorEntrada;
+				   }
+			   }
+			contadorValidos++;   
+			
+			
 			}
-			
-			else{ if(valorEntrada!=0){menor=valorEntrada;}}
-			contadorValidos++;
-			
-			
-			}
-			
-			
-		}
+
 			System.out.println("El valor mayor es "+mayor);
 			System.out.println("El valor menor es "+menor);     
+			System.out.println("El numero de datos validos introduces es de  "+contadorValidos);   
+		}
 	}
-	}
+	
 	
 

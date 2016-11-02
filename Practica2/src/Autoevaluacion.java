@@ -8,7 +8,7 @@ import java.util.Scanner;//importamos el paquete Scanner de la biblioteca
 public class Autoevaluacion 
 {
 	public static void main(String argumentos[])
-	{	// creamos una entrada por teclado y creamos las variables
+	{	// creamos dos entradas por teclado, una para numeros y otra para String y creamos las variables
 		
 		int valorEntrada, mayor=0, menor=0 , contadorValidos=0  ;
 		
@@ -18,12 +18,12 @@ public class Autoevaluacion
 		Scanner tecladoNumeros=new Scanner(System.in);
 		
 		
-	
+	//Iniciamos un bucle
+	//En primer lugar nos aseguramos de que los valores sean validos	
 			while(!s.equals("t"))
-			{	
-				
-				
-			System.out.println("Introduce un número, si es 0 dejaras de introducir números:");
+			{		
+			System.out.println("Teclea números entre 1 y 2147483647:");
+			System.out.println("Para terminar pulsa 0");
 			valorEntrada =tecladoNumeros.nextInt();
 			
 			if(valorEntrada<=0)
@@ -38,7 +38,7 @@ public class Autoevaluacion
 			      }
 				continue;
 			  }
-				 
+	//Examinamos los número y guardamos el mayor y el menor, los demas son desechados.			 
 			   if(contadorValidos==0)
 			   	{
 				  mayor=valorEntrada;
@@ -67,7 +67,7 @@ public class Autoevaluacion
 			
 			
 			}
-
+//Mostramos el mayor el menor y el numero de número validos introducidos
 			System.out.println("El valor mayor es "+mayor);
 			System.out.println("El valor menor es "+menor);     
 			System.out.println("El numero de datos validos introduces es de  "+contadorValidos);   
